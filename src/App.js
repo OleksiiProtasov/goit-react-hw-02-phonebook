@@ -1,12 +1,18 @@
 // import moduleName from './Components/input/';
 import { Component } from "react";
+import shortid from "shortid";
+
 import Container from "./Components/Container";
-import Input from "./Components/input/inputN";
+import Input from "./Components/input/input";
+import PhoneList from "./Components/Phonebook";
 
 class App extends Component {
   state = {
     contacts: [],
     name: "",
+    number: "",
+    filter: "",
+    id: shortid.generate(),
   };
 
   // handleChangeStats = (name) => {
@@ -30,6 +36,7 @@ class App extends Component {
       <>
         <Container>
           <Input></Input>
+          <PhoneList></PhoneList>
         </Container>
       </>
     );
